@@ -147,12 +147,12 @@ now we can use the command to bruteforce SSH
 
    3. Intercept Request
       - Right click and send to Intruder for bruteforce
-         ![Image](https://github.com/user-attachments/assets/4eeea6ac-d364-4ec8-acec-c283e74b1f4e)
+      ![Image](https://github.com/user-attachments/assets/4eeea6ac-d364-4ec8-acec-c283e74b1f4e)
 )
 
    4. Select Attack Type:
       - Choose Cluster Bomb Attack:
-         ![Image](https://github.com/user-attachments/assets/2e4db5cb-375e-4802-b26c-fd041aee08e9)
+      - ![Image](https://github.com/user-attachments/assets/2e4db5cb-375e-4802-b26c-fd041aee08e9)
 )
 
    5. Setting up Payload:
@@ -166,18 +166,18 @@ now we can use the command to bruteforce SSH
 
    6. Analyze the results to identify successful logins:
       - Click the lenght column for sort it:
-         ![Image](https://github.com/user-attachments/assets/53c8dc74-90dd-4f74-a0ef-a551bf66923c)
+      ![Image](https://github.com/user-attachments/assets/53c8dc74-90dd-4f74-a0ef-a551bf66923c)
 )
          > We can see here payload "admin" "password" with most lenght
 
       - Open the respone tab:
-         ![Image](https://github.com/user-attachments/assets/12035d45-334b-4474-8349-5253f1c74c0d)
+      ![Image](https://github.com/user-attachments/assets/12035d45-334b-4474-8349-5253f1c74c0d)
 )
          > As we can see here, we have successful attempt
 
    7. Login as admin:
       - Go back to the login form and try login:
-         ![Image](https://github.com/user-attachments/assets/d653531b-0a9a-435c-b520-3b4f17d09319)
+      ![Image](https://github.com/user-attachments/assets/d653531b-0a9a-435c-b520-3b4f17d09319)
 
 )
          
