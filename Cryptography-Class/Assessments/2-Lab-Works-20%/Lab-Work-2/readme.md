@@ -13,3 +13,15 @@
 4. Write a report in GitHub (Markdown) and show a short demo.
 
 ---
+
+## B. Lab Tasks
+
+### 1. Service Enumeration and Initial Access
+
+**Nmap Scan on Target Machine**
+
+To discover open services on the Metasploitable2 target machine (`192.168.21.137`), I used a version scan with `nmap`.  
+Command Used:
+```
+nmap -sV 192.168.21.137
+```
