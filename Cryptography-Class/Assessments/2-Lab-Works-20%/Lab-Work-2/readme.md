@@ -175,7 +175,8 @@ Explanation of Commands:
 - This command displays the already cracked passwords.
 - John saves cracked passwords to a file called john.pot. If you've cracked them before, this command will show the username:password pairs without cracking them again.
 
-![alt text](screenshots/cracked_pass.png)
+![ image ](https://github.com/user-attachments/assets/655b42c7-b6bd-434a-ba19-65425cba3f80)
+
 
 ### 5. Cryptographic Analysis and Mitigation
 
