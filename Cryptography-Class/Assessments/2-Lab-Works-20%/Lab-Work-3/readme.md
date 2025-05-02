@@ -29,31 +29,61 @@ By the end of this lab, we will be able to:
 
 **Goal:** Encrypt a message using a shared key (symmetric encryption) and then decrypt it with the same key.
 
-**Commands:**
-1. Haziq generate a strong random key
+---
+
+### Step-by-step :
+
+#### Step 1 :
+I am a `reciever` and `Haziq` is a `sender`. He will create a plaintext and key then send to me the encrypted message.
+
+#### Plaintext :
 ```bash
-openssl rand -base64 32 > key.bin
-```
-![ Image ](https://github.com/user-attachments/assets/a4b37c10-93cc-4fe8-bfd2-1bfb1597b26f)
+echo "This is a secret message for Afa from Haziq." > haziq_message.txt
 
-2. Create a plaintext message
+Task 2
+
+
+## Task 3 :Hashing and Message Integrity using SHA-256
+
+For this task I'm do it personally.
+
+---
+
+### Step 1 :
+
+Create a plaintext and hash it.
+
+#### Command :
 ```bash
-echo "This is secret don tell anybody." > message.txt
+echo "This document must remain unchanged." > integrity_check.txt
 ```
-![ image ](https://github.com/user-attachments/assets/9eb66937-8fdd-49b0-8d5b-02479a8b5e6a)
+![ image ](https://github.com/user-attachments/assets/2e7054d7-b1e4-42e6-af29-cc8a52395c28)
 
-Haziq encrypt using AES-256-CBC
+### Step 2 :
+Hashing the hash usung SHA-256
 ```bash
-openssl enc -aes-256-cbc -salt -in message.txt -out encrypted_message.bin -pass file:./key.bin
+openssl dgst -sha256 hash.txt
 ```
-> - `enc` : Encryption utility.
+![ image ](https://github.com/user-attachments/assets/22397737-2776-4e78-b213-7d80263bd5d1)
 
-> - `aes-256-cbc` : Specifies AES with 256-bit key in CBC mode.
+- `openssl dgst`: Use OpenSSL to compute a digest (hash).
 
-> - `salt` : Adds salt to prevent dictionary attacks.
+- `-sha256`: Specify the SHA-256 algorithm.
 
-> - `pass file` : ./key.bin: Reads key from file.
+### Step 3 :
+Modify the file.
 
-![image](https://github.com/user-attachments/assets/3ed602fb-512c-4833-b2e3-7b6ffebd4e0b)
+#### Command :
+```bash
+echo "This document is now changed." > integrity_check.txt
+
+![image](https://github.com/user-attachments/assets/5185c6a1-edaa-4050-bf68-62c86dbf9480)
+
+
+
+
+
+
+
 
 
