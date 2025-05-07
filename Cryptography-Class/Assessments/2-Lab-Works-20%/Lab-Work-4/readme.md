@@ -29,10 +29,6 @@ Open terminal in vscode and install `pycryptodome`.
 ```bash
 pip install pycryptodome
 ```
-
-- If error, It will give the right command then use full quotes in PowerShell. Example :
-```powershell
-
 ```
 
 Now our `visual studio code` is ready to use.
