@@ -121,7 +121,37 @@ Now let's decrypt the ciphertext.
 - `Encrypt with public key` – only the private key can decrypt this.
 - `Decrypt with private key` – gets the original message back.
 
+### ✅ Task 3: Hashing (SHA-256)
 
+### 🔐 What is SHA-256?
+
+SHA-256 is a one-way hashing algorithm that turns data into a fixed-size string (digest). It's commonly used to verify data integrity (not for encryption/decryption).
+
+
+Here is my python code.
+
+```py
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
+
+def rsa_encrypt_decrypt_user_input():
+    key = RSA.generate(2048)
+    private_key = key.export_key()
+    public_key = key.publickey().export_key()
+
+    plaintext = input("Enter a short message to encrypt using RSA: ").encode()
+
+    cipher = PKCS1_OAEP.new(RSA.import_key(public_key))
+    ciphertext = cipher.encrypt(plaintext)
+
+    decipher = PKCS1_OAEP.new(RSA.import_key(private_key))
+    decrypted = decipher.decrypt(ciphertext)
+
+    print(f"\nEncrypted (hex): {ciphertext.hex()}")
+    print(f"Decrypted: {decrypted.decode()}")
+
+rsa_encrypt_decrypt_user_input()
+```
 
 
 
