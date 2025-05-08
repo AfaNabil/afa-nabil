@@ -331,16 +331,36 @@ How it works:
 
 #### Generate and sign message with private key :
 
-I will assign a `digital signature` using my `private key`*(TASK2)* to the message and send both to the Haziq, Haziq will `verify` the message with `digital signature`.
+I will assign a digital signature using my private key `*(TASK2)*` to the message and send both to the Haziq, Haziq will `verify` the message with digital signature.
 
 ![image](https://github.com/user-attachments/assets/4655e0f2-7a31-41bb-b98a-d9c3f1ea6b8a)
 
 ### Digital Signature key
 ```bash
-W7MA8KClSVc27XEsSgcHt6Birt5f4FKBUK99xRE+Fq7XwW7JOcENDRyqRJpoyXNJCYHNWvX5is54DEaqORmIjnDJLoREzZrRTUDpNVn8goBT4SywXI+WxByh9Bj2yCTNEe+emRoib6cuvvtSB0bEnTUg4Ze/ATRn/LP/Wd3olazM4znZGjRZqJaVVITPwoLZ8ltUuURs8b6Aovx8OgTlKowr/zvjY5e0clnzsa1mQX/Rp3FXRCEQPhCrBND1LZIC+eEbXG6sMT7soPvU3GJuIOT7nkAdzQHLlZ3G0tfLXyntF+1fmeDq38EA3muXlfhRw59a2C/neSN6Dq76hJ/e+g==
+kH/N5LE4/qCjwHq+YJcGTogbCj5CcKeV3fPryMfcnN6GiVk5AdE95h26wnhP2BitP4xp4BAoAa3imvjCdFW3vZmMLLE/iyL4nXvh7xf59cJJva6xHgd486skas+5MQ9rd4lSv7ZncFdnXRhDoaNS6FD+yMEp4/h4riC27XTKnxwg4OjbNCxsuG9jBlBsiB3GeeSkCjtb9jRcAMaAETjq1GNjfBY575BB+ko4eio8rS8CKCs7rVv+WPKpQvkPq+aPrMSFBWrFl2HRU2ksxlDykAe6G1mY0Hl7WQkWZla/8FINqRhLqGFuMGB59YDbKm6H7rl90yg5um0ztU+Gz+lZxw==
 ```
 
 - Haziq will verify the message using public key *(TASK2)* with digital signature.
+
+### Original Text
+
+```bash
+Cryptography Lab by Haziq & Afa , NWS23010020 & NWS22070268
+```
+
+![image](https://github.com/user-attachments/assets/56ad3b0c-5d58-43f0-8ddd-f36353dc33bd)
+
+#### Edit message :
+
+change small thing in message to see the verify result.
+Just add : `!!!`
+```bash
+Cryptography Lab by Haziq & Afa , NWS23010020 & NWS22070268!!!
+```
+
+![image](https://github.com/user-attachments/assets/13ab62ca-d859-47e4-b76f-5ccf9cbb7f89)
+
+
 
 
 
