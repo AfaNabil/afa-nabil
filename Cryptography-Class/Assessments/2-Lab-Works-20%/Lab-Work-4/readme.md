@@ -281,11 +281,19 @@ if __name__ == "__main__":
 ```
 
 ### Hashing the message :
+```bash
+Cryptography Lab by Muhammad Afa'Nabil [bel]
+```
 ![image](https://github.com/user-attachments/assets/e07866de-3263-4517-8778-6e54d11778fc)
 
 ### Edit message :
 Just add what ever you want 
 ### example ` -`
+
+```bash
+Cryptography Lab by Muhammad Afa'Nabil [bel] -
+```
+
 ![image](https://github.com/user-attachments/assets/87b1a651-2e73-4e22-8280-27926b7d0877)
 
 ### Result :
