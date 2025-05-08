@@ -333,8 +333,16 @@ How it works:
 
 I will assign a `digital signature` using my `private key`*(TASK2)* to the message and send both to the Haziq, Haziq will `verify` the message with `digital signature`.
 
-
 ![image](https://github.com/user-attachments/assets/4655e0f2-7a31-41bb-b98a-d9c3f1ea6b8a)
+
+### Digital Signature key
+```bash
+W7MA8KClSVc27XEsSgcHt6Birt5f4FKBUK99xRE+Fq7XwW7JOcENDRyqRJpoyXNJCYHNWvX5is54DEaqORmIjnDJLoREzZrRTUDpNVn8goBT4SywXI+WxByh9Bj2yCTNEe+emRoib6cuvvtSB0bEnTUg4Ze/ATRn/LP/Wd3olazM4znZGjRZqJaVVITPwoLZ8ltUuURs8b6Aovx8OgTlKowr/zvjY5e0clnzsa1mQX/Rp3FXRCEQPhCrBND1LZIC+eEbXG6sMT7soPvU3GJuIOT7nkAdzQHLlZ3G0tfLXyntF+1fmeDq38EA3muXlfhRw59a2C/neSN6Dq76hJ/e+g==
+```
+
+- Haziq will verify the message using public key *(TASK2)* with digital signature.
+
+
 
 
 
