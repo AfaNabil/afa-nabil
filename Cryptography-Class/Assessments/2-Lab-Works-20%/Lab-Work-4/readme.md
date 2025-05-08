@@ -115,7 +115,11 @@ Haziq will encrypt a secret message using his key then give to me.
 Now let's decrypt the ciphertext.
 ![image](https://github.com/user-attachments/assets/567a0e10-011c-4af6-ae8e-1e97dbecc4d7)
 
+### 💡 Explanation
 
+- `Generate key pair` – creates a private and public key.
+- `Encrypt with public key` – only the private key can decrypt this.
+- `Decrypt with private key` – gets the original message back.
 
 
 
