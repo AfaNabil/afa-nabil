@@ -279,6 +279,45 @@ Just add what ever you want
 ### example ` -`
 ![image](https://github.com/user-attachments/assets/87b1a651-2e73-4e22-8280-27926b7d0877)
 
+### Result :
+First Hash : Cryptography Lab by Muhammad Afa'Nabil [bel]
+```bash
+9d4b8878093d01c74a153720f0f4459d20aeb70c90b37fd04174df439864986e
+```
+Second Hash: Cryptography Lab by Muhammad Afa'Nabil [bel] -
+```bash
+a2c22949501f24026e14a8e8c899dc5ec1c5bca1d88f65df8fc7fdac67453d91
+```
+### 🌪️ What is the Avalanche Effect?
+When you change even 1 character (or 1 bit) in the input, the entire hash output changes drastically — like a chain reaction.
+
+### 🔍 Why Does It Happen?
+
+Hash functions are designed so that:
+
+- Tiny changes in input produce completely different hashes
+- You can’t guess the input from the hash
+- It’s impossible to predict how the output will change
+
+This makes hash functions very secure and perfect for:
+
+- `Password storage`
+- `File integrity checking`
+- `Digital signatures`
+
+---
+
+### ✅ Task 4: Digital Signatures (RSA)
+
+### ✍️ What is a Digital Signature?
+
+A digital signature ensures:
+
+- `Integrity` – the message wasn't changed.
+- `Authenticity` – it was really sent by the owner of the private key.
+
+How it works:
+
 
 
 
