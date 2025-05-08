@@ -121,37 +121,177 @@ Now let's decrypt the ciphertext.
 - `Encrypt with public key` – only the private key can decrypt this.
 - `Decrypt with private key` – gets the original message back.
 
+### ✅ Task 2: Asymmetric Encryption (RSA)
+
+### 🔐 What is RSA?
+
+RSA is a method for encrypting and decrypting data using two keys:
+
+
+Here is my python code.
+- RSA_key_generator
+```py
+from Crypto.PublicKey import RSA
+import base64
+
+def generate_rsa_keys():
+    # Generate RSA key pair (2048-bit key)
+    key = RSA.generate(2048)
+    
+    # Extract the public and private keys
+    private_key = key.export_key()
+    public_key = key.publickey().export_key()
+    
+    # Convert keys to Base64
+    private_key_b64 = base64.b64encode(private_key).decode('utf-8')
+    public_key_b64 = base64.b64encode(public_key).decode('utf-8')
+    
+    return public_key_b64, private_key_b64
+
+if __name__ == "__main__":
+    public_key_b64, private_key_b64 = generate_rsa_keys()
+    
+    print("Public Key (Base64):")
+    print(public_key_b64)
+    
+    print("\nPrivate Key (Base64):")
+    print(private_key_b64)
+```
+- RSA_Encrypt
+```py
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
+import base64
+
+def encrypt_with_public_key(public_key_b64, plaintext):
+    # Decode the Base64-encoded public key
+    public_key_der = base64.b64decode(public_key_b64)
+    public_key = RSA.import_key(public_key_der)
+    
+    # Create cipher with OAEP padding
+    cipher = PKCS1_OAEP.new(public_key)
+    
+    # Encrypt the plaintext
+    encrypted_data = cipher.encrypt(plaintext.encode('utf-8'))
+    
+    # Return Base64-encoded ciphertext
+    return base64.b64encode(encrypted_data).decode('utf-8')
+
+if __name__ == "__main__":
+    # Get Base64 public key from user input
+    print("\nEnter Base64-encoded RSA public key: ")
+    public_key_b64 = input().strip()
+    
+    # Get plaintext to encrypt
+    print("\nEnter plaintext to encrypt: ")
+    plaintext = input().strip()
+    
+    # Encrypt and display result
+    try:
+        ciphertext_b64 = encrypt_with_public_key(public_key_b64, plaintext)
+        print("\nEncrypted Data (Base64): ")
+        print(ciphertext_b64)
+    except Exception as e:
+        print(f"\nError during encryption: {e}")
+```
+- RSA_Decrypt
+```py
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
+import base64
+
+def decrypt_rsa(ciphertext_b64, private_key_b64):
+    try:
+        # Decode the Base64 encoded private key and ciphertext
+        private_key_bytes = base64.b64decode(private_key_b64)
+        ciphertext_bytes = base64.b64decode(ciphertext_b64)
+        
+        # Import the private key from the decoded bytes
+        private_key = RSA.import_key(private_key_bytes)
+        
+        # Create the cipher object using the private key and OAEP scheme
+        cipher = PKCS1_OAEP.new(private_key)
+        
+        # Decrypt the ciphertext
+        plaintext_bytes = cipher.decrypt(ciphertext_bytes)
+        
+        # Decode the plaintext bytes to string
+        plaintext = plaintext_bytes.decode('utf-8')
+        
+        return plaintext
+    except Exception as e:
+        return f"❌ Decryption failed: {e}"
+
+if __name__ == "__main__":
+    # Input: ciphertext and private key in Base64 format
+    ciphertext_b64 = input("Enter the Base64 ciphertext: ")
+    private_key_b64 = input("\nEnter the Base64 private key: ")
+    
+    # Decrypt and print the result
+    decrypted_message = decrypt_rsa(ciphertext_b64, private_key_b64)
+    print(f"\n🔓 Decrypted Message:\n{decrypted_message}")
+```
+#### generate key pairs :
+I will create a key which is Public key and Private key
+![image](https://github.com/user-attachments/assets/9649044a-7ae8-4bd4-980d-21b9c3e42c56)
+
+#### Encrypt the plaintext :
+Haziq will Encrypt the plain-text to cipher-text using my public key that i create and then send back to me 
+![image](https://github.com/user-attachments/assets/874d250f-da07-42fa-8e9b-c88b0abccf30)
+
+#### Decrypt the ciphertext :
+I will Decrypt the cipher-text using my private key to see the plain-text
+![image](https://github.com/user-attachments/assets/e9c2955b-2f7e-4def-8bc4-9752a6907d8e)
+
 ### ✅ Task 3: Hashing (SHA-256)
 
 ### 🔐 What is SHA-256?
 
-SHA-256 is a one-way hashing algorithm that turns data into a fixed-size string (digest). It's commonly used to verify data integrity (not for encryption/decryption).
-
+SHA-256 is a one-way hashing algorithm that turns data into a fixed-size string. It's commonly used to verify data integrity (not for encryption/decryption).
 
 Here is my python code.
-
 ```py
-from Crypto.PublicKey import RSA
-from Crypto.Cipher import PKCS1_OAEP
+import hashlib
 
-def rsa_encrypt_decrypt_user_input():
-    key = RSA.generate(2048)
-    private_key = key.export_key()
-    public_key = key.publickey().export_key()
+def sha256_hash(text):
+    # Encode the text to bytes
+    text_bytes = text.encode('utf-8')
+    
+    # Create SHA-256 hash object and update with bytes
+    hash_object = hashlib.sha256()
+    hash_object.update(text_bytes)
+    
+    # Get the hexadecimal digest of the hash
+    hash_hex = hash_object.hexdigest()
+    return hash_hex
 
-    plaintext = input("Enter a short message to encrypt using RSA: ").encode()
-
-    cipher = PKCS1_OAEP.new(RSA.import_key(public_key))
-    ciphertext = cipher.encrypt(plaintext)
-
-    decipher = PKCS1_OAEP.new(RSA.import_key(private_key))
-    decrypted = decipher.decrypt(ciphertext)
-
-    print(f"\nEncrypted (hex): {ciphertext.hex()}")
-    print(f"Decrypted: {decrypted.decode()}")
-
-rsa_encrypt_decrypt_user_input()
+if __name__ == "__main__":
+    plaintext = input("Enter the text to hash with SHA-256: ")
+    hashed = sha256_hash(plaintext)
+    print(f"\n🔑 SHA-256 Hash:\n{hashed}")
 ```
+
+### Hashing the message :
+![image](https://github.com/user-attachments/assets/e07866de-3263-4517-8778-6e54d11778fc)
+
+### Edit message :
+Just add what ever you want 
+### example ` -`
+![image](https://github.com/user-attachments/assets/87b1a651-2e73-4e22-8280-27926b7d0877)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
