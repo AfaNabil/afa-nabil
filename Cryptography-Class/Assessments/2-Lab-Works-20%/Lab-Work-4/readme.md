@@ -104,6 +104,18 @@ if __name__ == "__main__":
     result = decrypt(encrypted_b64, password)
     print(f"\n🔓 Decrypted Plaintext:\n{result}")
 ```
+#### Encrypt the plaintext :
+
+Haziq will encrypt a secret message using his key then give to me.
+
+![image](https://github.com/user-attachments/assets/34a2391f-e694-4e0f-9fcf-0a9776bf750a)
+
+#### Decrypt the ciphertext :
+
+Now let's decrypt the ciphertext.
+![image](https://github.com/user-attachments/assets/567a0e10-011c-4af6-ae8e-1e97dbecc4d7)
+
+
 
 
 
