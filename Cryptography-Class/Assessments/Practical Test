@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Cybersecurity Assignment Automation Script (Kali Linux)
-# Author: Muhammad Afa'Nabil Bin Afanizam
-# Student ID: NWS22070268
-# Note: Ensure GPG and SSH are installed and configured
-
-# ========== Task 1: Generate GPG Key Pair ==========
