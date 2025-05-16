@@ -1,8 +1,11 @@
 # 🛡️ Practical Test – Cybersecurity Lab (Kali Linux)
 
 **Student Name:** Muhammad Afa'Nabil Bin Afanizam  
+
 **Student ID:** NWS22070268
+
 **Course:** Cryptography / Cybersecurity  
+
 **Platform:** Kali Linux  
 
 ---
