@@ -107,4 +107,40 @@ After key is created, list your keys
 
 ![Image 2025-05-16 at 20 02 24_8834875f](https://github.com/user-attachments/assets/23b21858-0d6b-44e3-9332-878b36458115)
 
+# ========== Task 4: SSH Key Authentication ==========
+
+For now im using Powershell
+
+- Here are the step by step using PowerShell and Including Kali Linux
+
+![WhatsApp Image 2025-05-16 at 21 48 15_3d2a3d1f](https://github.com/user-attachments/assets/52a06a45-4854-4b89-8928-c0ab4499ffdd)
+
+![WhatsApp Image 2025-05-16 at 21 49 23_82a35cdf](https://github.com/user-attachments/assets/ddef6b8e-89d6-4b19-8aee-dce869caf321)
+
+![WhatsApp Image 2025-05-16 at 21 50 07_36169caa](https://github.com/user-attachments/assets/bf2a05a7-c004-4979-a767-af6b4426de74)
+
+![WhatsApp Image 2025-05-16 at 21 50 34_63af5964](https://github.com/user-attachments/assets/639410ee-aa44-4a16-b36c-f3b3aa35a683)
+
+![WhatsApp Image 2025-05-16 at 21 50 50_e5a4b0ab](https://github.com/user-attachments/assets/9da64a99-def4-42c4-9d6a-822a20fda36e)
+
+![WhatsApp Image 2025-05-16 at 21 51 11_99184a2b](https://github.com/user-attachments/assets/c82462da-c154-4de6-a33d-bebbed47fe29)
+
+![WhatsApp Image 2025-05-16 at 21 51 25_481ffdf9](https://github.com/user-attachments/assets/05efba3b-8a95-4b25-9921-c7534ff99d9f)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
