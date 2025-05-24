@@ -4,6 +4,8 @@
 
 ![image](https://github.com/user-attachments/assets/fa10b3a8-97c0-4a46-9b12-0a21bbf2270c)
 
+![image](https://github.com/user-attachments/assets/9cf0fc9e-547c-45ab-8832-ddc0b0a0834f)
+
 ![image](https://github.com/user-attachments/assets/d08d2fac-d8c4-4932-b260-459cc486abbc)
 
 ![image](https://github.com/user-attachments/assets/457fe05f-49d9-4035-94ee-6bfc07463443)
@@ -14,38 +16,5 @@
 
 ![image](https://github.com/user-attachments/assets/bd6b6fdb-091c-4439-b3a3-3830c40cad13)
 
-```py
-from Crypto.Cipher import AES
-from hashlib import sha256
-import os
 
-# Derive the same key as the ransomware
-KEY_SUFFIX = "SecretHere"
-KEY_STR = f"Bukan{KEY_SUFFIX}"
-KEY = sha256(KEY_STR.encode()).digest()[:16]
-
-def unpad(data):
-    pad_len = data[-1]
-    return data[:-pad_len]
-
-def decrypt_file(filepath):
-    with open(filepath, "rb") as f:
-        ciphertext = f.read()
-    cipher = AES.new(KEY, AES.MODE_ECB)
-    padded_plaintext = cipher.decrypt(ciphertext)
-    plaintext = unpad(padded_plaintext)
-    output_path = filepath.replace(".enc", "_decrypted.txt")
-    with open(output_path, "wb") as f:
-        f.write(plaintext)
-    print(f"Decrypted: {filepath} -> {output_path}")
-
-def main():
-    folder = "."
-    for file in os.listdir(folder):
-        if file.endswith(".enc"):
-            decrypt_file(os.path.join(folder, file))
-
-if __name__ == "__main__":
-    main()
-```
 
